@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_c166c8cb685e5c5b072d37e4830ba41c" kind="dir">
+    <compoundname>Sik_Radios</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dev7/Projects/code_transfer/new_repo/GNU_radio_blocks/gr-Sik_Radios/include/gnuradio/Sik_Radios/"/>
+  </compounddef>
+</doxygen>

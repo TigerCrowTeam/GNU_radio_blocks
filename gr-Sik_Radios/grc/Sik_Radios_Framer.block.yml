@@ -1,0 +1,28 @@
+id: Sik_Radios_sik_framer
+label: Sik Framer
+category: "[453rd]/Sik Radios"
+parameters:
+- id: net_id
+  label: Net ID
+  dtype: int
+  default: 19
+- id: trailer
+  label: Trailer
+  dtype: int_vector
+  default: [0x8e, 0x1c, 0x49]
+
+inputs:
+- domain: message
+  id: pdus
+  label: pdus
+
+outputs:
+- domain: message
+  id: pdus
+  label: pdus
+
+templates:
+  imports: from gnuradio import Sik_Radios
+  make: Sik_Radios.Framer(${net_id}, ${trailer})
+
+file_format: 1

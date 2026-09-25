@@ -1,0 +1,29 @@
+id: Sik_Radios_sync_inserter
+label: Sik Sync Inserter
+category: "[453rd]/Sik Radios"
+
+parameters:
+- id: preamble_len
+  label: Preamble Length (bytes)
+  dtype: int
+  default: 16
+- id: sync_word
+  label: Sync Word
+  dtype: int_vector
+  default: [0x2D, 0xD4]
+
+inputs:
+- domain: message
+  id: pdus
+  label: pdus
+
+outputs:
+- domain: message
+  id: pdus
+  label: pdus
+
+templates:
+  imports: from gnuradio import Sik_Radios
+  make: Sik_Radios.SyncInserter(${preamble_len}, ${sync_word})
+
+file_format: 1

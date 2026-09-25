@@ -1,0 +1,38 @@
+id: Sik_Radios_universal_whitener
+label: Sik Universal Whitener
+category: "[453rd]/Sik Radios"
+
+parameters:
+- id: order
+  label: LFSR Order
+  dtype: int
+  default: 9
+- id: taps
+  label: Taps
+  dtype: int_vector
+  default: [9, 4, 0]
+- id: seed_str
+  label: Seed (bit string)
+  dtype: string
+  default: "111111111"
+- id: bit_order
+  label: Bit Order
+  dtype: string
+  default: msb
+  options: [msb, lsb]
+
+inputs:
+- domain: message
+  id: pdus
+  label: pdus
+
+outputs:
+- domain: message
+  id: pdus
+  label: pdus
+
+templates:
+  imports: from gnuradio import Sik_Radios
+  make: Sik_Radios.UniversalWhitener(${order}, ${taps}, ${seed_str}, ${bit_order})
+
+file_format: 1
